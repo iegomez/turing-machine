@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  in_state: 1
+  out_state: 1
+  in_char: 1
+  out_char: 1
+  direction: MyString
+
+two:
+  in_state: 1
+  out_state: 1
+  in_char: 1
+  out_char: 1
+  direction: MyString

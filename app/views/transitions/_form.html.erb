@@ -1,0 +1,37 @@
+<%= form_for(@transition) do |f| %>
+  <% if @transition.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@transition.errors.count, "error") %> prohibited this transition from being saved:</h2>
+
+      <ul>
+      <% @transition.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :in_state %><br>
+    <%= f.number_field :in_state %>
+  </div>
+  <div class="field">
+    <%= f.label :out_state %><br>
+    <%= f.number_field :out_state %>
+  </div>
+  <div class="field">
+    <%= f.label :in_char %><br>
+    <%= f.number_field :in_char %>
+  </div>
+  <div class="field">
+    <%= f.label :out_char %><br>
+    <%= f.number_field :out_char %>
+  </div>
+  <div class="field">
+    <%= f.label :direction %><br>
+    <%= f.text_field :direction %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

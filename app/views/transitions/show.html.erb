@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>In state:</strong>
+  <%= @transition.in_state %>
+</p>
+
+<p>
+  <strong>Out state:</strong>
+  <%= @transition.out_state %>
+</p>
+
+<p>
+  <strong>In char:</strong>
+  <%= @transition.in_char %>
+</p>
+
+<p>
+  <strong>Out char:</strong>
+  <%= @transition.out_char %>
+</p>
+
+<p>
+  <strong>Direction:</strong>
+  <%= @transition.direction %>
+</p>
+
+<%= link_to 'Edit', edit_transition_path(@transition) %> |
+<%= link_to 'Back', transitions_path %>

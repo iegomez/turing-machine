@@ -1,0 +1,27 @@
+<h1>Listing alphabets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Machine</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @alphabets.each do |alphabet| %>
+      <tr>
+        <td><%= alphabet.machine %></td>
+        <td><%= link_to 'Show', alphabet %></td>
+        <td><%= link_to 'Edit', edit_alphabet_path(alphabet) %></td>
+        <td><%= link_to 'Destroy', alphabet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Alphabet', new_alphabet_path %>

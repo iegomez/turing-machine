@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  machine_id: 
+  name: MyString
+  starts: false
+  accepts: false
+
+two:
+  machine_id: 
+  name: MyString
+  starts: false
+  accepts: false

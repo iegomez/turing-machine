@@ -1,0 +1,35 @@
+<h1>Listing transitions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>In state</th>
+      <th>Out state</th>
+      <th>In char</th>
+      <th>Out char</th>
+      <th>Direction</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @transitions.each do |transition| %>
+      <tr>
+        <td><%= transition.in_state %></td>
+        <td><%= transition.out_state %></td>
+        <td><%= transition.in_char %></td>
+        <td><%= transition.out_char %></td>
+        <td><%= transition.direction %></td>
+        <td><%= link_to 'Show', transition %></td>
+        <td><%= link_to 'Edit', edit_transition_path(transition) %></td>
+        <td><%= link_to 'Destroy', transition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Transition', new_transition_path %>
